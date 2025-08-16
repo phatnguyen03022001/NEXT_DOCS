@@ -1,0 +1,58 @@
+# XIII. Các Chủ Đề Bổ Sung cho Next.js
+
+## 1. Server Components và Client Components
+- **Giới thiệu React Server Components (RSC)**: Khái niệm cơ bản, lợi ích (giảm bundle size, tối ưu server-side rendering).
+- **Server Components vs Client Components**: Khi nào dùng "use client" directive, cách tổ chức và kết hợp.
+- **Composition Patterns**: Cách kết hợp Server và Client Components trong App Router.
+- **Tối ưu Performance**: Sử dụng Server Components để giảm JavaScript tải về client.
+
+## 2. Error Handling và UI
+- **Error Boundaries**: Sử dụng `error.js` trong App Router để xử lý lỗi.
+- **Loading States**: Tích hợp `loading.js` cho trạng thái tải dữ liệu.
+- **Custom 404 và Not Found**: Tạo `not-found.js` và cấu hình custom error pages.
+- **Global Error Handling**: Xử lý lỗi toàn cục với `global-error.js`.
+
+## 3. Testing trong Next.js
+- **Unit Testing**: Sử dụng Jest và React Testing Library để test components.
+- **Integration Testing**: Kiểm tra các API Routes/Route Handlers và data fetching.
+- **End-to-End Testing**: Cấu hình Playwright hoặc Cypress cho E2E testing.
+- **Testing Server Components**: Best practices khi test Server Components.
+
+## 4. Accessibility (a11y)
+- **Cơ bản về Accessibility**: Tầm quan trọng của a11y trong web development.
+- **Best Practices**: Sử dụng semantic HTML, ARIA roles, và keyboard navigation.
+- **Testing Accessibility**: Công cụ như Lighthouse, axe-core để kiểm tra a11y.
+- **Next.js Specifics**: Đảm bảo Link component và dynamic routes hỗ trợ screen readers.
+
+## 5. Progressive Web Apps (PWA)
+- **Giới thiệu PWA**: Lợi ích (offline support, push notifications).
+- **Cấu hình PWA**: Tạo `manifest.json` và service workers với `next-pwa`.
+- **Offline Support**: Sử dụng Workbox hoặc custom service workers.
+- **Testing PWA**: Kiểm tra PWA trên các thiết bị với Lighthouse.
+
+## 6. Turbopack và Build Optimization
+- **Giới thiệu Turbopack**: Bundler mới thay Webpack, cải thiện tốc độ dev và build (Next.js 15+).
+- **Cấu hình Turbopack**: Sử dụng trong `next dev --turbo` và `next build`.
+- **So sánh với Webpack**: Performance benchmarks và use cases.
+- **Tối ưu Build**: Giảm thời gian build với Turbopack và caching strategies.
+
+## 7. Security Best Practices
+- **Security Headers**: Cấu hình Content Security Policy (CSP), X-XSS-Protection, v.v. trong `next.config.js`.
+- **OWASP Guidelines**: Phòng chống các lỗ hổng phổ biến (XSS, CSRF, SQL Injection).
+- **API Security**: Bảo vệ Route Handlers và API Routes với rate limiting, input validation.
+- **Secure Deployment**: Best practices khi deploy trên Vercel hoặc VPS (HTTPS, secrets management).
+
+## 8. Parallel Routes và Intercepting Routes
+- **Parallel Routes**: Sử dụng trong App Router để render nhiều view cùng lúc (ví dụ: dashboard layouts).
+- **Intercepting Routes**: Tạo modal hoặc overlays mà không thay đổi URL.
+- **Route Groups**: Tổ chức routes với `(folder)` để không ảnh hưởng URL structure.
+
+## 9. Streaming và Suspense
+- **Streaming trong App Router**: Tải dần nội dung với `Suspense` boundaries.
+- **Suspense for Data Fetching**: Kết hợp với Server Components để xử lý async data.
+- **Partial Prerendering**: Kết hợp static và dynamic rendering (Next.js 14+).
+
+## 10. Instrumentation và Monitoring
+- **Instrumentation**: Sử dụng `instrumentation.js` để theo dõi performance và errors.
+- **Analytics**: Tích hợp Vercel Analytics hoặc OpenTelemetry.
+- **Error Tracking**: Kết nối với Sentry hoặc LogRocket để monitor production.
